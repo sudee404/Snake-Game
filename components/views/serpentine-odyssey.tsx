@@ -270,8 +270,8 @@ const LEVEL_DATA: LevelData[] = [
 
 export default function SerpentineOdyssey() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
-  const renderRef = useRef<number>()
+  const animationRef = useRef<number>(0)
+  const renderRef = useRef<number>(0)
   const lastTimeRef = useRef<number>(0)
 
   // Canvas dimensions
@@ -291,7 +291,7 @@ export default function SerpentineOdyssey() {
   const [gameState, setGameState] = useState<"playing" | "paused">("playing")
   const [speed, setSpeed] = useState(150)
   const [multiplier, setMultiplier] = useState(1)
-  const [multiplierTime, setMultiplierTime] = useState(0)
+  const [_multiplierTime, setMultiplierTime] = useState(0)
   const [invincibilityTime, setInvincibilityTime] = useState(0)
   const [particles, setParticles] = useState<Particle[]>([])
   const [fireworks, setFireworks] = useState<Firework[]>([])
@@ -305,7 +305,6 @@ export default function SerpentineOdyssey() {
   const [isQTEActive, setIsQTEActive] = useState(false)
   const [qteKey, setQTEKey] = useState("")
   const [qteTimer, setQTETimer] = useState(0)
-  const QTE_KEYS = ["q", "e", "r", "t", "y"]
 
   // Settings
   const [settings, setSettings] = useState<GameSettings>({
@@ -930,6 +929,8 @@ export default function SerpentineOdyssey() {
 
   // Game loop
   useEffect(() => {
+    const QTE_KEYS = ["q", "e", "r", "t", "y"]
+
     if (currentPage !== "game" || gameState !== "playing" || isQTEActive) return
 
     const gameLoop = (currentTime: number) => {
@@ -1116,7 +1117,7 @@ export default function SerpentineOdyssey() {
     levelUp,
     invincibilityTime,
     isQTEActive,
-    qteKey,
+    qteKey
   ])
 
   // Initialize food when canvas dimensions are available

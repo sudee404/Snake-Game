@@ -95,7 +95,7 @@ const SNAKE_THEMES = {
 
 export default function SnakeGame() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number>(0)
   const lastTimeRef = useRef<number>(0)
 
   // Game State
@@ -109,7 +109,7 @@ export default function SnakeGame() {
   const [gameState, setGameState] = useState<"playing" | "paused">("playing")
   const [speed, setSpeed] = useState(150)
   const [multiplier, setMultiplier] = useState(1)
-  const [multiplierTime, setMultiplierTime] = useState(0)
+  const [_multiplierTime, setMultiplierTime] = useState(0)
   const [particles, setParticles] = useState<Particle[]>([])
 
   // Settings
