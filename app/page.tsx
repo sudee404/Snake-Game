@@ -1618,8 +1618,8 @@ export default function SerpentineOdyssey() {
 
       // Prioritize moving towards food
       if (closestFood) {
-        const targetX = closestFood?.position?.x
-        const targetY = closestFood?.position?.y
+        const targetX = (closestFood as Food)?.position?.x
+        const targetY = (closestFood as Food)?.position?.y
 
         // Try horizontal movement first
         if (targetX > botHead.x) possibleDirections.unshift({ x: 1, y: 0 })
