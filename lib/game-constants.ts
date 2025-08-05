@@ -191,7 +191,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"], // Red-pink for fragile walls and negative shockwave
     surfaceBg: "bg-slate-900/30", // Increased transparency
     surfaceBorder: "border-slate-700/50",
-    textPrimary: "text-slate-100",
+    textPrimary: "text-slate-100 hover:text-white",
     textMuted: "text-slate-400",
     highlight1: "text-cyan-400",
     highlight2: "text-emerald-400",
@@ -220,7 +220,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"], // Red-pink for fragile walls and negative shockwave
     surfaceBg: "bg-blue-900/30", // Increased transparency
     surfaceBorder: "border-blue-700/50",
-    textPrimary: "text-blue-100",
+    textPrimary: "text-blue-100 hover:text-white",
     textMuted: "text-blue-400",
     highlight1: "text-sky-400",
     highlight2: "text-green-400",
@@ -249,7 +249,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"], // Red-pink for fragile walls and negative shockwave
     surfaceBg: "bg-red-900/30", // Increased transparency
     surfaceBorder: "border-red-700/50",
-    textPrimary: "text-red-100",
+    textPrimary: "text-red-100 hover:text-white",
     textMuted: "text-red-400",
     highlight1: "text-amber-400",
     highlight2: "text-lime-400",
@@ -278,7 +278,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"], // Red-pink for fragile walls and negative shockwave
     surfaceBg: "bg-purple-900/30", // Increased transparency
     surfaceBorder: "border-purple-700/50",
-    textPrimary: "text-purple-100",
+    textPrimary: "text-purple-100 hover:text-white",
     textMuted: "text-purple-400",
     highlight1: "text-fuchsia-400",
     highlight2: "text-lime-400",
@@ -307,7 +307,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"],
     surfaceBg: "bg-gray-900/30",
     surfaceBorder: "border-gray-700/50",
-    textPrimary: "text-lime-300",
+    textPrimary: "text-lime-300 hover:text-white",
     textMuted: "text-gray-400",
     highlight1: "text-lime-400",
     highlight2: "text-fuchsia-400",
@@ -336,7 +336,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"],
     surfaceBg: "bg-green-900/30",
     surfaceBorder: "border-green-700/50",
-    textPrimary: "text-green-100",
+    textPrimary: "text-green-100 hover:text-white",
     textMuted: "text-green-400",
     highlight1: "text-lime-400",
     highlight2: "text-yellow-400",
@@ -365,7 +365,7 @@ export const THEME_PALETTES: Record<GameSettings["snakeTheme"], ThemePalette> = 
     dangerGradientColors: ["#ef4444", "#f43f5e"],
     surfaceBg: "bg-red-900/30",
     surfaceBorder: "border-red-700/50",
-    textPrimary: "text-orange-100",
+    textPrimary: "text-orange-100 hover:text-white",
     textMuted: "text-red-400",
     highlight1: "text-orange-400",
     highlight2: "text-yellow-400",
@@ -562,7 +562,7 @@ export const TOOLS_DATA: Tool[] = [
     name: "Super Shield",
     description: "Grants extended invincibility, protecting from all collisions.",
     cost: 300,
-    icon: "✨🛡️",
+    icon: "🛡️",
     initialUses: 1,
     stackable: true,
   },

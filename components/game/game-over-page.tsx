@@ -14,6 +14,7 @@ interface GameOverPageProps {
   startGameSession: (mode: "levels" | "endless" | "coop", levelIndex?: number) => void // Updated prop
   navigateToPage: (page: string) => void
   currentTheme: ThemePalette
+  level:number
   lives: number // New prop
   gameMode: "levels" | "endless" | "coop" // New prop
   botScore?: number // New prop for bot score
@@ -27,6 +28,7 @@ export function GameOverPage({
   startGameSession,
   navigateToPage,
   currentTheme,
+  level,
   lives, // Destructure lives
   gameMode, // Destructure gameMode
   botScore, // Destructure botScore
@@ -93,7 +95,7 @@ export function GameOverPage({
         {" "}
         {/* Adjusted max-w for better button layout */}
         <Button
-          onClick={() => startGameSession(gameMode)} // Pass current game mode
+          onClick={() => startGameSession(gameMode,level)} // Pass current game mode
           size="lg"
           className={`h-14 text-xl bg-gradient-to-r ${
             canPlayAgain ? currentTheme.successGradient : "from-gray-500 to-gray-600 cursor-not-allowed"

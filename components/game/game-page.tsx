@@ -432,7 +432,7 @@ export function GamePage({
 
   return (
     <div className="h-screen w-screen relative overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0" />
+      <canvas ref={canvasRef} className="absolute inset-0 min-h-screen" />
 
       {/* HUD */}
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">

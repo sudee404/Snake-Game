@@ -59,10 +59,10 @@ export function MenuPage({
           className={`h-14 text-xl border-2 ${currentTheme.buttonOutlineBorder} ${currentTheme.textPrimary} ${currentTheme.surfaceBg} ${currentTheme.buttonOutlineHoverBg} hover:scale-105 transition-all shadow-md`}
         >
           <Hammer className="w-6 h-6 mr-3" />
-          Tools ({currency} 🪙)
+          Tools
           {equippedToolData && (
-            <span className="ml-2 text-xs text-emerald-400">
-              ({equippedToolData.name} {equippedToolUses && equippedToolUses > 0 ? `(${equippedToolUses} uses)` : "(Used)"})
+            <span className="text-xs text-emerald-400">
+              ({equippedToolData.name})
             </span>
           )}
         </Button>

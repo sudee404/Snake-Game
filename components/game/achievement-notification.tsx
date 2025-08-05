@@ -85,7 +85,7 @@ export function AchievementNotification({
 
       {/* Achievement Card */}
       <div className="fixed top-4 right-4 z-50 animate-in slide-in-from-right duration-300 fade-out-1000">
-        <Card className={`p-4 ${currentTheme.warningGradient} text-black border-0 shadow-sm`}>
+        <Card className={`p-4 ${currentTheme.warningGradient} bg-inherit text-black border-0 shadow-sm`}>
           {" "}
           {/* Reduced shadow further */}
           <div className="flex items-center gap-3">

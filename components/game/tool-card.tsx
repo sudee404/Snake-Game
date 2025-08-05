@@ -57,6 +57,7 @@ export function ToolCard({
         <div>
           <h3 className={`text-xl font-bold ${currentTheme.highlight1}`}>{tool.name}</h3>
           <p className={`text-sm ${currentTheme.textMuted}`}>{tool.description}</p>
+          <small className={`text-sm ${currentTheme.textMuted}`}>Owned : <em>{currentUses ?? 0}</em></small>
         </div>
       </div>
 
@@ -79,7 +80,7 @@ export function ToolCard({
             disabled={!canBuyLifePotion}
             className={`bg-gradient-to-r ${canBuyLifePotion ? currentTheme.successGradient : "from-gray-500 to-gray-600"} ${currentTheme.buttonPrimaryTextColor} font-semibold`}
           >
-            <ShoppingCart className="w-5 h-5 mr-2" />
+            <ShoppingCart className="w-5 h-5" />
             Buy Life ({lives}/{MAX_LIVES})
           </Button>
         ) : !isUnlocked || (isUnlocked && tool.stackable) ? ( // Show buy button if not unlocked or if stackable
@@ -88,8 +89,8 @@ export function ToolCard({
             disabled={!canAfford}
             className={`bg-gradient-to-r ${canAfford ? currentTheme.successGradient : "from-gray-500 to-gray-600"} ${currentTheme.buttonPrimaryTextColor} font-semibold`}
           >
-            <ShoppingCart className="w-5 h-5 mr-2" />
-            {isUnlocked && tool.stackable ? "Add Uses" : "Buy"}
+            <ShoppingCart className="w-5 h-5" />
+            {isUnlocked && tool.stackable ? "Add" : "Buy"}
           </Button>
         ) : null}
 
@@ -101,10 +102,8 @@ export function ToolCard({
               variant={isEquipped ? "default" : "outline"}
               disabled={currentUses === 0 && !isEquipped} // Disable equip if 0 uses and not currently equipped
             >
-              {isEquipped ? <Check className="w-5 h-5 mr-2" /> : <Hammer className="w-5 h-5 mr-2" />}
+              {isEquipped ? <Check className="w-5 h-5" /> : <Hammer className="w-5 h-5" />}
               {isEquipped ? "Equipped" : "Equip"}
-              {currentUses > 0 && !isEquipped && <span className="ml-2 text-xs">({currentUses} uses)</span>}
-              {currentUses === 0 && !isEquipped && <span className="ml-2 text-xs">(No uses)</span>}
             </Button>
           )}
       </div>
